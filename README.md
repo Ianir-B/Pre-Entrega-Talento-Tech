@@ -18,8 +18,4 @@ El objetivo es ofrecer un catalogo visual e interactivo de productos musicales, 
     Google Fonts: Tipografia importada
   Multimedia: Integracion de reproductores y videos mediante 'iframe' 
   Formspree: Procesamiento del formulario de contacto para encargos, consultas y mantenimiento
-  Git y Github: Control de versiones y despliegue del proyecto
-
-  #Enlace: 
-  #Podes visitar la pagina web publicada en el siguiente enlace: 
-  #Enlace GitHub: 
+  Git y Github: Control de versiones 
