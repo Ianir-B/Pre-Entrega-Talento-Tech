@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,9 +9,10 @@
 
 body {
     width: 100%;
+    overflow-x: hidden;
 }
 
-/* Estilos --> titulos y parrafos*/
+/* Tipografía */
 
 h1 {
     font-size: 50px;
@@ -36,7 +38,7 @@ h6 {
 
 p {
     font-size: 22px;
-    color: #fdfdfd;
+    color: #1a0303;
     margin: 15px 0 20px 0;
     letter-spacing: 1px;
 }
@@ -49,7 +51,7 @@ p {
     margin: 40px 0;
 }
 
-/*HEADER*/
+/* HEADER */
 
 .header {
     display: flex;
@@ -57,7 +59,7 @@ p {
     align-items: center;
     padding: 20px 80px;
     background-color: #f3e3e3;
-    box-shadow: 0 5px 15px rgba (0, 0, 0, 0.06);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     z-index: 999;
     position: sticky;
     top: 0px;
@@ -79,11 +81,11 @@ p {
     text-decoration: none;
     font-size: 2rem;
     font-weight: 600;
-    color: #1a1a1a;
+    color: #181717;
 }
 
 .lista-navegacion a:hover {
-    color: #088178
+    color: #088178;
 }
 
 .header img {
@@ -91,7 +93,7 @@ p {
     height: auto;
 }
 
-/*HERO*/
+/* HERO */
 
 .hero {
     background-image: url('./img/FONDO.jpg');
@@ -99,7 +101,7 @@ p {
     justify-content: flex-end;
     align-items: center;
     height: 95vh;
-    width: 100% ;
+    width: 100%;
     background-size: cover;
     background-position: top 5% center;
     padding: 0 80px;
@@ -128,7 +130,7 @@ p {
 }
 
 .hero .hero-content h1 {
-    color: #bdf886;
+    color: #8fe43f;
     font-size: 3.5rem;
     margin-bottom: 15px;
 }
@@ -152,13 +154,109 @@ p {
     background-color: #066f66;
 }
 
-/*Adaptacion para pantallas - Media Queries*/
+/* PRODUCTOS DESTACADOS */
 
-@media(max-width: 1200px) {
+
+.flex-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card-producto {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card-producto img {
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.card-producto h3 {
+    color: #181717;
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+}
+
+.card-producto p {
+    color: #504f4f;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* FORMULARIO */
+
+section form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section form span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #088178;
+    text-transform: uppercase;
+}
+
+section form h2 {
+    margin-bottom: 20px;
+    color: #181717;
+}
+
+section form div {
+    margin-bottom: 15px;
+}
+
+section form input,
+section form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cecccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+}
+
+section form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f3e3e3;
+    margin-top: 40px;
+}
+
+footer p {
+    color: #1f1e1e;
+    margin: 0;
+}
+
+/*Adaptacion responsive (MEDIA QUERIES) */
+
+@media (max-width: 1200px) {
     .hero {
         padding: 0 60px;
     }
-    .hero .hero-content{
+    .hero .hero-content {
         width: 55%;
     }
 }
@@ -187,15 +285,41 @@ p {
 }
 
 @media (max-width: 768px) {
+    .section-p1 {
+        padding: 30px 20px;
+    }
+
+    /* Adaptación del Header y Menú */
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .lista-navegacion {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .lista-navegacion li {
+        padding: 0 8px;
+    }
+
+    .lista-navegacion a {
+        font-size: 1.2rem;
+    }
+
+    /* Hero mobile */
     .hero {
         height: 70vh;
-        padding: 0 40px;
+        padding: 0 20px;
         justify-content: center;
         background-position: top center;
     }
 
-    .hero .hero-content{
-        width: 80%;
+    .hero .hero-content {
+        width: 100%;
         align-items: center;
         text-align: center;
     }
@@ -216,12 +340,8 @@ p {
 @media (max-width: 576px) {
     .hero {
         height: 60vh;
-        padding: 0 20px;
+        padding: 0 15px;
         background-position: 55% center;
-    }
-
-    .hero .hero-content {
-        width: 100%;
     }
 
     .hero .hero-content h4 {
@@ -246,51 +366,4 @@ p {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
-}
-
-section form {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-section form span {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #088178;
-    text-transform: uppercase;
-}
-
-section form h2 {
-    margin-bottom: 20px;
-    color: #1a1a1a;
-}
-
-section form div {
-    margin-bottom: 15px;
-}
-
-section form input,
-section form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    outline: none;
-}
-
-section form textarea {
-    height: 120px;
-    resize: vertical;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f3e3e3;
-    margin-top: 40px;
 }
